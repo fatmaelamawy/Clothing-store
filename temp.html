@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temp.css">
+    <title>fatma Clothing Store</title>
+</head>
+<body>
+    <header>
+        <h1>fatma Clothing Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#products">products</a></li>
+                <li><a href="#contact"> contact us </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to the Clothing Store</h2>
+        <p>We offer a wide range of modern and high-quality clothing.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+    <p>We take pride in presenting the latest fashion trends at affordable prices. Our team is committed to meeting your needs and providing a unique shopping experience.</p>
+    </section>
+
+<section id="top-selling">
+    <h2>Top Selling</h2>
+    <div class="banner-container">
+        <div class="banner active">
+            <img src="https://ae01.alicdn.com/kf/Sa8ae1b5473e54c668cf6dfa30fe51e14O/DEAT.jpg_.webp" alt="منتج 1">
+        </div>
+        <div class="banner">
+            <img src="https://t3.gstatic.com/images?q=tbn:ANd9GcTl3cB7a-7ioj96fm1kB_HmiDHekQy8Fgl0YpWkwlBHhyz66NVH" alt="منتج 2">
+        </div>
+        <div class="banner">
+            <img src="https://m.media-amazon.com/images/I/61tNO0SDKRL._AC_SX679_.jpg" alt="منتج 3">
+        </div>
+    </div>
+</section>
+
+    <section id="products">
+        <h2>products</h2>
+        <div class="product">
+            <img src="https://saint-laurent.dam.kering.com/m/1317444a11e81afb/Medium2-637556Y8B571030_A.jpg?v=3" alt="منتج 1">
+            <h3>product 1</h3>
+            <p>price : $XX.XX</p>
+            <button class="add-to-cart-btn" onclick="addToCart('product 1', XX.XX)">add to cart</button>
+        </div>
+
+    </section>
+    <section id="products">
+        <div class="product">
+            <img src="https://ae01.alicdn.com/kf/Sa8ae1b5473e54c668cf6dfa30fe51e14O/DEAT.jpg_.webp" alt="product 2">
+            <h3>product 2</h3>
+            <p>price : $XX.XX</p>
+            <button class="add-to-cart-btn" onclick="addToCart('product 2', XX.XX)">أضف إلى العربة</button>
+        </div>
+
+    </section>
+    <section id="products">
+        <div class="product">
+            <img src="https://t3.gstatic.com/images?q=tbn:ANd9GcTl3cB7a-7ioj96fm1kB_HmiDHekQy8Fgl0YpWkwlBHhyz66NVH" alt="product 3">
+            <h3>product 3</h3>
+            <p>price : $XX.XX</p>
+            <button class="add-to-cart-btn" onclick="addToCart('product 3', XX.XX)">أضف إلى العربة</button>
+        </div>
+
+    </section>
+    <section id="products">
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61tNO0SDKRL._AC_SX679_.jpg" alt="product 4">
+            <h3>product 4</h3>
+            <p>price : $XX.XX</p>
+            <button class="add-to-cart-btn" onclick="addToCart('product 4', XX.XX)">أضف إلى العربة</button>
+        </div>
+
+    <section id="contact">
+        <h2>contact us </h2>
+
+    </section>
+
+    <footer>
+        <p>© 2023 Clothing store. All rights reserved </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+const banners = document.querySelectorAll(".banner");
+let currentIndex = 0;
+
+setInterval(() => {
+    banners[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % banners.length;
+    banners[currentIndex].classList.add("active");
+}, 3000);
+});
+
+        function addToCart(productName, price) {
+            alert('تمت إضافة ' + productName + ' إلى العربة. السعر: $' + price);
+        }
+    </script>
+</body>
+</html>
